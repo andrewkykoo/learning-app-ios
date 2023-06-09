@@ -12,55 +12,26 @@ struct HomeView: View {
     @EnvironmentObject var model: ContentModel
     
     var body: some View {
-        ScrollView {
-            LazyVStack {
-                ForEach(model.modules) { module in
-                    ZStack {
-                        Rectangle()
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                            .shadow(radius: 5)
-                            .aspectRatio(CGSize(width: 335, height: 175), contentMode: .fit)
-                        
-                        HStack {
-                            Image("\(module.content.image)")
-                                .resizable()
-                                .frame(width: 116, height: 116)
-                                .clipShape(Circle())
-                            
-                            Spacer()
-                            
-                            VStack(alignment: .leading, spacing: 10) {
-                                Text("Learn \(module.category)")
-                                    .bold()
+        NavigationView {
+            VStack(alignment: .leading) {
+                Text("What do you want to learn today?")
+                    .padding(.leading, 20)
+                
+                ScrollView {
+                    LazyVStack {
+                        ForEach(model.modules) { module in
+                            VStack(spacing: 20) {
+                                HomeViewRow(image: module.content.image, title: "Learn \(module.category)", description: module.content.description, count: "\(module.content.lessons.count) lessons", time: module.content.time)
                                 
-                                Text("\(module.content.description)")
-                                    .padding(.bottom, 20)
-                                    .font(.caption)
+                                HomeViewRow(image: module.test.image, title: " \(module.category) Test", description: module.test.description, count: "\(module.test.questions.count) lessons", time: module.test.time)
                                 
-                                HStack {
-                                    Image(systemName: "text.book.closed")
-                                        .resizable()
-                                        .frame(width: 15, height: 15)
-                                    Text("\(module.content.lessons.count) lessons")
-                                        .font(.caption)
-                                    
-                                    Spacer()
-                                    
-                                    Image(systemName: "clock")
-                                        .resizable()
-                                        .frame(width: 15, height: 15)
-                                    Text(module.content.time)
-                                        .font(.caption)
-                                }
                             }
-                            .padding(.leading, 20)
                         }
-                        .padding(.horizontal, 20)
                     }
+                    .padding()
                 }
             }
-            .padding()
+            .navigationTitle("Get Started")
         }
     }
 }
