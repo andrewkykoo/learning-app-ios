@@ -21,13 +21,20 @@ struct HomeView: View {
                     LazyVStack {
                         ForEach(model.modules) { module in
                             VStack(spacing: 20) {
-                                HomeViewRow(image: module.content.image, title: "Learn \(module.category)", description: module.content.description, count: "\(module.content.lessons.count) lessons", time: module.content.time)
+                                
+                                NavigationLink(destination: ContentView()
+                                    .onAppear(perform: {
+                                        model.beginModule(module.id)
+                                    })) {
+                                        HomeViewRow(image: module.content.image, title: "Learn \(module.category)", description: module.content.description, count: "\(module.content.lessons.count) lessons", time: module.content.time)
+                                    }
                                 
                                 HomeViewRow(image: module.test.image, title: " \(module.category) Test", description: module.test.description, count: "\(module.test.questions.count) lessons", time: module.test.time)
                                 
                             }
                         }
                     }
+                    .accentColor(.black)
                     .padding()
                 }
             }
