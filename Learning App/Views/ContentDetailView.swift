@@ -42,6 +42,23 @@ struct ContentDetailView: View {
                         
                     }
                 }
+            } else {
+                Button {
+                    // take the user back to the homeview
+                    model.currentContentSelected = nil
+                } label: {
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(.green)
+                            .cornerRadius(10)
+                            .shadow(radius: 5)
+                            .frame(height: 48)
+                        
+                        Text("Complete")
+                            .foregroundColor(.white)
+                            .bold()
+                    }
+                }
             }
         }
         .navigationBarTitle(lesson?.title ?? "")
