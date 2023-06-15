@@ -24,6 +24,7 @@
 		B58F34472A326F4F007B7562 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F34462A326F4F007B7562 /* Models.swift */; };
 		B5A15A812A3AAAAA0071E9AA /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A15A802A3AAAAA0071E9AA /* TestView.swift */; };
 		B5A15A832A3B62A50071E9AA /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A15A822A3B62A50071E9AA /* RectangleCard.swift */; };
+		B5A15A872A3B98760071E9AA /* TestResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A15A862A3B98760071E9AA /* TestResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		B58F34462A326F4F007B7562 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		B5A15A802A3AAAAA0071E9AA /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		B5A15A822A3B62A50071E9AA /* RectangleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
+		B5A15A862A3B98760071E9AA /* TestResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				B5179F6A2A38F46800EE8C3F /* CodeTextView.swift */,
 				B5A15A802A3AAAAA0071E9AA /* TestView.swift */,
 				B5A15A822A3B62A50071E9AA /* RectangleCard.swift */,
+				B5A15A862A3B98760071E9AA /* TestResultView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5179F302A381B6600EE8C3F /* Constants..swift in Sources */,
+				B5A15A872A3B98760071E9AA /* TestResultView.swift in Sources */,
 				B58F342B2A323882007B7562 /* HomeView.swift in Sources */,
 				B5A15A812A3AAAAA0071E9AA /* TestView.swift in Sources */,
 				B586991E2A336683009099C2 /* HomeViewRow.swift in Sources */,
