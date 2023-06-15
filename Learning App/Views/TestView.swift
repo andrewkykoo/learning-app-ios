@@ -65,18 +65,24 @@ struct TestView: View {
                 
                 Button {
                     
-                    submitted = true
-                    
-                    // check the answer and increment the counter if correct
-                    if selectedAnswerIndex == model.currentQuestion!.correctIndex {
-                        numCorrect += 1
+                    // check if answer has been submmitted
+                    if submitted == true {
+                        model.nextQuestion()
+                        submitted = false
+                        selectedAnswerIndex = nil
+                    } else {
+                        submitted = true
+                        
+                        if selectedAnswerIndex == model.currentQuestion!.correctIndex {
+                            numCorrect += 1
+                        }
                     }
                     
                 } label: {
                     ZStack {
                         RectangleCard(color:. green)
                             .frame(height: 50)
-                        Text("Submit")
+                        Text(buttonText)
                             .foregroundColor(.white)
                             .bold()
                     }
@@ -88,6 +94,19 @@ struct TestView: View {
             .navigationTitle("\(model.currentModule?.category ?? "") Test")
         } else {
             ProgressView()
+        }
+    }
+    
+    var buttonText: String {
+        // check if answer has been submitted
+        if submitted == true {
+            if model.currentQuestionIndex + 1 == model.currentModule!.test.questions.count {
+                return "Completed"
+            } else {
+                return "Next"
+            }
+        } else {
+            return "Submit"
         }
     }
 }
