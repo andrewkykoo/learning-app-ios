@@ -23,6 +23,7 @@
 		B58F34452A325924007B7562 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = B58F34432A325924007B7562 /* data.json */; };
 		B58F34472A326F4F007B7562 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F34462A326F4F007B7562 /* Models.swift */; };
 		B5A15A812A3AAAAA0071E9AA /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A15A802A3AAAAA0071E9AA /* TestView.swift */; };
+		B5A15A832A3B62A50071E9AA /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A15A822A3B62A50071E9AA /* RectangleCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		B58F34432A325924007B7562 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		B58F34462A326F4F007B7562 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		B5A15A802A3AAAAA0071E9AA /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		B5A15A822A3B62A50071E9AA /* RectangleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				B5179F2A2A380F2800EE8C3F /* ContentDetailView.swift */,
 				B5179F6A2A38F46800EE8C3F /* CodeTextView.swift */,
 				B5A15A802A3AAAAA0071E9AA /* TestView.swift */,
+				B5A15A822A3B62A50071E9AA /* RectangleCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				B58F34292A323882007B7562 /* LearningApp.swift in Sources */,
 				B5179F6B2A38F46800EE8C3F /* CodeTextView.swift in Sources */,
 				B58699222A34033D009099C2 /* ContentViewRow.swift in Sources */,
+				B5A15A832A3B62A50071E9AA /* RectangleCard.swift in Sources */,
 				B58F343D2A324A0E007B7562 /* ContentModel.swift in Sources */,
 				B58F34472A326F4F007B7562 /* Models.swift in Sources */,
 			);
