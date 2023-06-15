@@ -14,11 +14,15 @@ class ContentModel: ObservableObject {
     var currentModuleIndex = 0
     @Published var currentLesson: Lesson?
     var currentLessonIndex = 0
-    @Published var lessonDescription = NSAttributedString()
+    @Published var currentQuestion: Question?
+    var currentQuestionIndex = 0
+    @Published var codeText = NSAttributedString()
+    
     
     var styleData: Data?
     
     @Published var currentContentSelected: Int?
+    @Published var currentTestSelected: Int?
     
     init() {
         getLocalData()
@@ -74,7 +78,7 @@ class ContentModel: ObservableObject {
             currentLessonIndex = 0
         }
         currentLesson = currentModule!.content.lessons[currentLessonIndex]
-        lessonDescription = addStyling(currentLesson!.explanation)
+        codeText = addStyling(currentLesson!.explanation)
     }
     
     func hasNextLesson() -> Bool {
@@ -86,10 +90,20 @@ class ContentModel: ObservableObject {
         
         if currentLessonIndex < currentModule!.content.lessons.count {
             currentLesson = currentModule!.content.lessons[currentLessonIndex]
-            lessonDescription = addStyling(currentLesson!.explanation)
+            codeText = addStyling(currentLesson!.explanation)
         } else {
             currentLessonIndex = 0
             currentLesson = nil
+        }
+    }
+    
+    func beginTest(_ moduleId: Int) {
+        beginModule(moduleId)
+        currentQuestionIndex = 0
+        
+        if currentModule?.test.questions.count ?? 0 > 0 {
+            currentQuestion = currentModule!.test.questions[currentQuestionIndex]
+            codeText = addStyling(currentQuestion!.content)
         }
     }
     

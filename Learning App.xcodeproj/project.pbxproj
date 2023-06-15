@@ -22,6 +22,7 @@
 		B58F34442A325924007B7562 /* style.html in Resources */ = {isa = PBXBuildFile; fileRef = B58F34422A325924007B7562 /* style.html */; };
 		B58F34452A325924007B7562 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = B58F34432A325924007B7562 /* data.json */; };
 		B58F34472A326F4F007B7562 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F34462A326F4F007B7562 /* Models.swift */; };
+		B5A15A812A3AAAAA0071E9AA /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A15A802A3AAAAA0071E9AA /* TestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		B58F34422A325924007B7562 /* style.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = style.html; sourceTree = "<group>"; };
 		B58F34432A325924007B7562 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		B58F34462A326F4F007B7562 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		B5A15A802A3AAAAA0071E9AA /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				B58699212A34033D009099C2 /* ContentViewRow.swift */,
 				B5179F2A2A380F2800EE8C3F /* ContentDetailView.swift */,
 				B5179F6A2A38F46800EE8C3F /* CodeTextView.swift */,
+				B5A15A802A3AAAAA0071E9AA /* TestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			files = (
 				B5179F302A381B6600EE8C3F /* Constants..swift in Sources */,
 				B58F342B2A323882007B7562 /* HomeView.swift in Sources */,
+				B5A15A812A3AAAAA0071E9AA /* TestView.swift in Sources */,
 				B586991E2A336683009099C2 /* HomeViewRow.swift in Sources */,
 				B58699202A33991C009099C2 /* ContentView.swift in Sources */,
 				B5179F2B2A380F2800EE8C3F /* ContentDetailView.swift in Sources */,
